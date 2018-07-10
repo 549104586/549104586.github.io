@@ -7,26 +7,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>前端框架入门一 | chen</title>
+  <title>vue.js 1.0 v-link传参总结 | chen</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="前端," />
+    <meta name="keywords" content="chen,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="接手微信公众号已经有两三个月了，但是对于前端架构还了解甚少，一是没有深入学习，二是没有及时总结,导致技术提升非常慢，每天都是新的知识点，三是学习的方法存在问题。现在就开始慢慢撸，构建自己的知识体系。 一 调整前端学习路线  针对第三点做出调整：所谓知识体系，就是知识与知识连接的网络图，而知识框架，就是有层次的树形结构。  在前端的知识框架中需要依次了解的有：  运行环境  编码开发  库类  理论">
-<meta name="keywords" content="前端">
+  <meta name="description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端框架入门一">
-<meta property="og:url" content="https://549104586.github.io/2018/07/04/vue-js入门一/index.html">
+<meta property="og:title" content="vue.js 1.0 v-link传参总结">
+<meta property="og:url" content="https://549104586.github.io/2018/07/10/vue-js-1-0-v-link传参总结/index.html">
 <meta property="og:site_name" content="chen">
-<meta property="og:description" content="接手微信公众号已经有两三个月了，但是对于前端架构还了解甚少，一是没有深入学习，二是没有及时总结,导致技术提升非常慢，每天都是新的知识点，三是学习的方法存在问题。现在就开始慢慢撸，构建自己的知识体系。 一 调整前端学习路线  针对第三点做出调整：所谓知识体系，就是知识与知识连接的网络图，而知识框架，就是有层次的树形结构。  在前端的知识框架中需要依次了解的有：  运行环境  编码开发  库类  理论">
+<meta property="og:description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-04T08:08:15.038Z">
+<meta property="og:updated_time" content="2018-07-10T04:04:10.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端框架入门一">
-<meta name="twitter:description" content="接手微信公众号已经有两三个月了，但是对于前端架构还了解甚少，一是没有深入学习，二是没有及时总结,导致技术提升非常慢，每天都是新的知识点，三是学习的方法存在问题。现在就开始慢慢撸，构建自己的知识体系。 一 调整前端学习路线  针对第三点做出调整：所谓知识体系，就是知识与知识连接的网络图，而知识框架，就是有层次的树形结构。  在前端的知识框架中需要依次了解的有：  运行环境  编码开发  库类  理论">
+<meta name="twitter:title" content="vue.js 1.0 v-link传参总结">
+<meta name="twitter:description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
 
   
 
@@ -183,22 +182,17 @@
 </div>
 
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-调整前端学习路线"><span class="toc-text">一 调整前端学习路线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-了解前端基础框架"><span class="toc-text">二 了解前端基础框架</span></a></li></ol>
-  </div>
-
 
 
 <div class="content content-post CENTER">
-   <article id="post-vue-js入门一" class="article article-type-post" itemprop="blogPost">
+   <article id="post-vue-js-1-0-v-link传参总结" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">前端框架入门一</h1>
+    <h1 class="post-title">vue.js 1.0 v-link传参总结</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.07.04</span>
+        <span>2018.07.10</span>
       </span>
 
       
@@ -214,7 +208,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="https://549104586.github.io//2018/07/04/vue-js入门一/#disqus_thread"></a>
+          <a href="https://549104586.github.io//2018/07/10/vue-js-1-0-v-link传参总结/#disqus_thread"></a>
         </span>
       
 
@@ -231,32 +225,29 @@
 
   <div class="article-content">
     
-      <p><code>接手微信公众号已经有两三个月了，但是对于前端架构还了解甚少，一是没有深入学习，二是没有及时总结,导致技术提升非常慢，每天都是新的知识点，三是学习的方法存在问题。现在就开始慢慢撸，构建自己的知识体系。</code></p>
-<h3 id="一-调整前端学习路线"><a href="#一-调整前端学习路线" class="headerlink" title="一 调整前端学习路线"></a>一 调整前端学习路线</h3><p>  针对第三点做出调整：所谓知识体系，就是知识与知识连接的网络图，而知识框架，就是有层次的树形结构。</p>
-<p> 在前端的知识框架中需要依次了解的有：</p>
-<ol>
-<li><p>运行环境</p>
-</li>
-<li><p>编码开发</p>
-</li>
-<li><p>库类</p>
-</li>
-<li><p>理论知识</p>
-</li>
-</ol>
-<h3 id="二-了解前端基础框架"><a href="#二-了解前端基础框架" class="headerlink" title="二 了解前端基础框架"></a>二 了解前端基础框架</h3><p>  1.这次项目的前端基础框架:  vue+webpack+WEUI</p>
-<p>   首先了解下他们是什么，看看官方背书~</p>
+      <p>vue.js 1.0</p>
+<p>v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。</p>
+<p>  v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。</p>
+<p>1.在Appointment.vue文件中在html加上标签</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class="weui-cell weui-cell_access" v-link="&#123;path:'/Appointment/'+index+'/'+item.appointment_applies_count,params:&#123;index:index,item:item.appointment_applies_count&#125;&#125;"&gt;</span><br></pre></td></tr></table></figure>
+<p>此处 path中的index必须要和params中的value对应，不是和key对应！！</p>
+<p>2.在min.js和route-config.js中也就是路由配置文件中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;configRouter&#125; <span class="keyword">from</span> <span class="string">'./route-config'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line">let router = new VueRouter()</span><br><span class="line">&gt;configRouter(router)</span><br></pre></td></tr></table></figure>
+<p>导入路由文件</p>
+<p>这里使用调用了一个函数configRouter(在min.js文件中)来具体配置路由</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export function configRouter(router) &#123;</span><br><span class="line">const routeMap = &#123;</span><br><span class="line">    <span class="string">'/Appointment/:index/:acount'</span>:&#123;</span><br><span class="line">      name:<span class="string">'Appointment'</span>,</span><br><span class="line">      component:require(<span class="string">'./components/doctor/Appointment.vue'</span>),</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  router.map(routeMap)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里参数没有限制，但是url限制在2kb</p>
+<p>3.在其他组件中使用参数：</p>
 <blockquote>
-<p>“<br>  vue.js是2018年流行的js框架,号称“全家桶”，是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
+<p>this.$router.params.index</p>
 </blockquote>
 <blockquote>
-<p>Webpack是一个自动化打包工具, 通过一个入口文件, 将所有依赖的模块打包成为一个js文件, 当然你也可以通过code spliting将其切分为多个js文件, 按需加载以提高效率.</p>
+<p>this.$router.params.acount</p>
 </blockquote>
-<blockquote>
-<p>WeUI是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信 Web 开发量身设计，可以令用户的使用感知更加统一<br>“</p>
-</blockquote>
-<p>个人感觉vue组件化理念确实很好，webpack之前没接触过，自动化工具只有耳闻，WEUI由于目前是很低版本的，感觉不太符合我的审美。本次项目是开发微信公众号,[ 个人项目开发微信小程序]。</p>
-<p>更多的需要整理更新。</p>
+<p>v-link的其他用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 字面量路径 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&apos;home&apos;&quot;&gt;Home&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 效果同上 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&#123; path: &apos;home&apos; &#125;&quot;&gt;Home&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 具名路径 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&#123; name: &apos;detail&apos;, params: &#123;id: &apos;01&apos;&#125; &#125;&quot;&gt;Home&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>v-link相关参考：</p>
+<p>[<a href="https://www.cnblogs.com/avon/p/5943008.html]" target="_blank" rel="noopener">https://www.cnblogs.com/avon/p/5943008.html]</a></p>
+<p>[<a href="https://github.com/vuejs/vue-router]" target="_blank" rel="noopener">https://github.com/vuejs/vue-router]</a></p>
 
     
   </div>
@@ -294,10 +285,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2018/07/04/git-操作/">
+    <a class="show pull-left" href="/2018/07/04/vue-js入门一/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2018/07/10/vue-js-1-0-v-link传参总结/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -422,7 +413,7 @@
   <script>
     var disqus_shortname = 'chen';
     
-    var disqus_url = 'https://549104586.github.io/2018/07/04/vue-js入门一/';
+    var disqus_url = 'https://549104586.github.io/2018/07/10/vue-js-1-0-v-link传参总结/';
     
     (function(){
       var dsq = document.createElement('script');
