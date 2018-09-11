@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue.js 1.0 v-link传参总结 | chen</title>
+  <title>vue 实现屏蔽移动端复制功能 | chen</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,17 +15,17 @@
     <meta name="keywords" content="chen,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
+  <meta name="description" content="由于医生提供的资料都比较宝贵，所以要求在移动端不能复制。特地总结一下网上和自己的几个方法。  一 方法实现 1.第一种覆盖大多数的方法 12345678910 *&amp;#123; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:non">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue.js 1.0 v-link传参总结">
-<meta property="og:url" content="https://549104586.github.io/2018/07/10/vue-js-1-0-v-link传参总结/index.html">
+<meta property="og:title" content="vue 实现屏蔽移动端复制功能">
+<meta property="og:url" content="https://549104586.github.io/2018/09/11/vue-实现屏蔽移动端复制功能/index.html">
 <meta property="og:site_name" content="chen">
-<meta property="og:description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
+<meta property="og:description" content="由于医生提供的资料都比较宝贵，所以要求在移动端不能复制。特地总结一下网上和自己的几个方法。  一 方法实现 1.第一种覆盖大多数的方法 12345678910 *&amp;#123; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:non">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-10T04:04:10.411Z">
+<meta property="og:updated_time" content="2018-09-11T08:35:15.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue.js 1.0 v-link传参总结">
-<meta name="twitter:description" content="vue.js 1.0 v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。   v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。 1.在Appointment.vue文件中在html加上标签 1&amp;lt;a cla">
+<meta name="twitter:title" content="vue 实现屏蔽移动端复制功能">
+<meta name="twitter:description" content="由于医生提供的资料都比较宝贵，所以要求在移动端不能复制。特地总结一下网上和自己的几个方法。  一 方法实现 1.第一种覆盖大多数的方法 12345678910 *&amp;#123; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:non">
 
   
 
@@ -185,14 +185,14 @@
 
 
 <div class="content content-post CENTER">
-   <article id="post-vue-js-1-0-v-link传参总结" class="article article-type-post" itemprop="blogPost">
+   <article id="post-vue-实现屏蔽移动端复制功能" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">vue.js 1.0 v-link传参总结</h1>
+    <h1 class="post-title">vue 实现屏蔽移动端复制功能</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.07.10</span>
+        <span>2018.09.11</span>
       </span>
 
       
@@ -208,7 +208,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="https://549104586.github.io//2018/07/10/vue-js-1-0-v-link传参总结/#disqus_thread"></a>
+          <a href="https://549104586.github.io//2018/09/11/vue-实现屏蔽移动端复制功能/#disqus_thread"></a>
         </span>
       
 
@@ -225,29 +225,29 @@
 
   <div class="article-content">
     
-      <p>vue.js 1.0</p>
-<p>v-link目前主流版本已经很高了，使用a标签v-link这种方法已经不多见了，现在简单总结下。</p>
-<p>  v-link 是一个用来让用户在 vue-router 应用的不同路径间跳转的指令。该指令接受一个 JavaScript 表达式，并会在用户点击元素时用该表达式的值去调用 router.Go。</p>
-<p>1.在Appointment.vue文件中在html加上标签</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class="weui-cell weui-cell_access" v-link="&#123;path:'/Appointment/'+index+'/'+item.appointment_applies_count,params:&#123;index:index,item:item.appointment_applies_count&#125;&#125;"&gt;</span><br></pre></td></tr></table></figure>
-<p>此处 path中的index必须要和params中的value对应，不是和key对应！！</p>
-<p>2.在min.js和route-config.js中也就是路由配置文件中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;configRouter&#125; <span class="keyword">from</span> <span class="string">'./route-config'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line">let router = new VueRouter()</span><br><span class="line">&gt;configRouter(router)</span><br></pre></td></tr></table></figure>
-<p>导入路由文件</p>
-<p>这里使用调用了一个函数configRouter(在min.js文件中)来具体配置路由</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export function configRouter(router) &#123;</span><br><span class="line">const routeMap = &#123;</span><br><span class="line">    <span class="string">'/Appointment/:index/:acount'</span>:&#123;</span><br><span class="line">      name:<span class="string">'Appointment'</span>,</span><br><span class="line">      component:require(<span class="string">'./components/doctor/Appointment.vue'</span>),</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  router.map(routeMap)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里参数没有限制，但是url限制在2kb</p>
-<p>3.在其他组件中使用参数：</p>
-<blockquote>
-<p>this.$router.params.index</p>
+      <blockquote>
+<p>由于医生提供的资料都比较宝贵，所以要求在移动端不能复制。特地总结一下网上和自己的几个方法。</p>
 </blockquote>
+<p>一 方法实现</p>
+<p>1.第一种覆盖大多数的方法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> *&#123;</span><br><span class="line"> <span class="attribute">-webkit-user-select</span>:none;</span><br><span class="line"> <span class="attribute">-khtml-user-select</span>:none;</span><br><span class="line"> <span class="attribute">-moz-user-select</span>:none;</span><br><span class="line"> <span class="attribute">-ms-user-select</span>:none;</span><br><span class="line"> user-select:none;	#但是安卓不行</span><br><span class="line"> &#125;</span><br><span class="line">   <span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-user-select</span>:auto; <span class="comment">/*webkit浏览器*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.第一种在上面，第二种<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div onselectstart=<span class="string">"return false;"</span>&gt;</span><br><span class="line">  -webkit-touch-callout:none;</span><br><span class="line"> -moz-touch-callout:none;</span><br><span class="line"> -ms-touch-callout:none;</span><br><span class="line"> touch-callout:none;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>this.$router.params.acount</p>
+<p>这种在微信浏览器安卓不能复制，但是在安卓的网页上依旧可以复制</p>
 </blockquote>
-<p>v-link的其他用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 字面量路径 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&apos;home&apos;&quot;&gt;Home&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 效果同上 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&#123; path: &apos;home&apos; &#125;&quot;&gt;Home&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 具名路径 --&gt;</span><br><span class="line">&lt;a v-link=&quot;&#123; name: &apos;detail&apos;, params: &#123;id: &apos;01&apos;&#125; &#125;&quot;&gt;Home&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<p>v-link相关参考：</p>
-<p>[<a href="https://www.cnblogs.com/avon/p/5943008.html]" target="_blank" rel="noopener">https://www.cnblogs.com/avon/p/5943008.html]</a></p>
-<p>[<a href="https://github.com/vuejs/vue-router]" target="_blank" rel="noopener">https://github.com/vuejs/vue-router]</a></p>
+<p>3.使用原生js阻止默认事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.oncopy = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">      e.preventDefault();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>在多数安卓机子都无效</p>
+</blockquote>
+<p>4.第四种，触摸的默认事件是滑动：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ontouchstart=<span class="string">"return false"</span></span><br></pre></td></tr></table></figure></p>
+<p>5.在vue里面实现，阻止默认的长按事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">##html</span><br><span class="line"></span><br><span class="line">&lt;div v-longtap=&quot;conpytouch&quot;&gt;</span><br><span class="line">hello</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">###vue</span><br><span class="line"></span><br><span class="line">export default&#123;</span><br><span class="line">data()&#123;...&#125;,</span><br><span class="line">components:&#123;&#125;,</span><br><span class="line">method:&#123;</span><br><span class="line">copytouch:function(e,s)&#123;</span><br><span class="line">        e.preventDefault=true</span><br><span class="line">        alert(&quot;长按了！！&quot;)//这里可进行复杂的处理，我</span><br><span class="line">      到这步已经莫名其妙好了&#125;,</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>6.做一个透明罩，增加一个div，设置它的z-index为一个比较大的值<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"><span class="attribute">height</span>:<span class="number">100%</span>;</span><br><span class="line"><span class="attribute">width</span>:<span class="number">1000%</span>;</span><br><span class="line"><span class="attribute">position</span>:absolute;</span><br><span class="line">z-index:1000;#越大越在上面</span><br><span class="line"><span class="selector-tag">opacity</span><span class="selector-pseudo">:0</span>;#越大越不透明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里还没实验过，但是思路和主要的两个元素在上面了，可能布局有问题，需要调整</p>
+<p>二 相关基础知识</p>
+<p>1.touch事件</p>
+<p>以下是四种touch事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">touchstart:     //手指放到屏幕上时触发</span><br><span class="line">touchmove:      //手指在屏幕上滑动式触发</span><br><span class="line">touchend:       //手指离开屏幕时触发</span><br><span class="line">touchcancel:    //系统取消touch事件时触发</span><br></pre></td></tr></table></figure>
+<p>touch事件的详细介绍：[<a href="http://caibaojian.com/mobile-touch-event.html]" target="_blank" rel="noopener">http://caibaojian.com/mobile-touch-event.html]</a></p>
 
     
   </div>
@@ -285,10 +285,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2018/07/04/vue-js入门一/">
+    <a class="show pull-left" href="/2018/07/10/vue-js-1-0-v-link传参总结/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2018/09/11/vue-实现屏蔽移动端复制功能/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -413,7 +413,7 @@
   <script>
     var disqus_shortname = 'chen';
     
-    var disqus_url = 'https://549104586.github.io/2018/07/10/vue-js-1-0-v-link传参总结/';
+    var disqus_url = 'https://549104586.github.io/2018/09/11/vue-实现屏蔽移动端复制功能/';
     
     (function(){
       var dsq = document.createElement('script');
